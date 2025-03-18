@@ -3,8 +3,8 @@ module YARD
   module Templates
     module Helpers
       module Markup
-        begin require 'rdoc'; rescue LoadError; nil end
         begin
+          require 'rdoc'
           require 'rdoc/markdown'
         rescue LoadError
           raise NameError, "could not load RDoc Markdown support (rdoc is too old)"
